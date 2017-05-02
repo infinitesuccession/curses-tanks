@@ -29,7 +29,7 @@ void MySleep(int milliseconds)
 #if defined(WIN32)
 	Sleep(milliseconds);
 #else
-	usleep(milliseconds * 1000);
+	usleep(milliseconds * 500);
 #endif
 }
 void DrawScreen(Ground & g, Player * players, int turn)
@@ -116,19 +116,19 @@ int main(int argc, char * argv[])
 			keep_going = false;
 			break;
 
-		case 'w':
+		case 'a':
 			players[turn].PowerDown();
 			break;
 
-		case 's':
+		case 'd':
 			players[turn].PowerUp();
 			break;
 
-		case 'd':
+		case 'w':
 			players[turn].AngleUp();
 			break;
 
-		case 'a':
+		case 's':
 			players[turn].AngleDown();
 			break;
 
