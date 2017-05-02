@@ -33,7 +33,7 @@ void Player::Initialize(int column, Side side)
 
 void Player::Draw(Ground & g)
 {
-	mvaddch(g.ground.at(col) - 1, col + 1, '@');
+	mvaddch(g.ground.at(col) - 1, col + 1, '@');//G.GROUND.AT(COL) IS THE LOCATION OF THE PLAYER
 }
 
 void Player::PowerUp()
@@ -64,6 +64,10 @@ void Player::AngleDown()
 		angle = 0.0;
 }
 
+bool Player::Hit(Ground & g)
+{
+    return true;
+}
 void Player::DrawSettings(int turn)
 {
 	bool my_turn = (turn == 0 && s == LEFT) || (turn == 1 && s == RIGHT);

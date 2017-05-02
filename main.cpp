@@ -84,7 +84,8 @@ void Shoot(Ground & g, Player * players, int turn)
 		move((int)pNy - 1, (int)pNx + 1);
 		addch('*');
 		refresh();
-		MySleep(50);
+        MySleep(50);
+        
 	}
 }
 

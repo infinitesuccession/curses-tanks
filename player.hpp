@@ -18,7 +18,7 @@ public:
 	void PowerDown();
 	void AngleUp();
 	void AngleDown();
-
+    bool Hit(Ground & ground);
 	int col;
 	double power;
 	double angle;
